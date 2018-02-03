@@ -22,10 +22,7 @@ fs.appendFile("server.log", log + "\n", (err) => {
 });
 
 // app.use((req, res, next) => {
-// 	res.render("maintenance.hbs", {
-// 		pageTitle: "This page is currently not working",
-// 		parag: "Please visit us tomorrow"
-// 	});
+// 	res.render("maintenance.hbs");
 // });
 
 app.use(express.static(__dirname + "/public"));
@@ -44,6 +41,14 @@ app.get("/", (req, res) => {
 	res.render("home.hbs", {
 		pageTitle: "Home page",
 		welcomeMessage: "Welcome home"
+	});
+});
+
+
+app.get("/portfolio", (req, res) => {
+	res.render("portfolio.hbs", {
+		pageTitle: "This is portfolio page",
+		someText: "Some info about my portfolio"
 	});
 });
 
