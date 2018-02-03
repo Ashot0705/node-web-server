@@ -45,10 +45,10 @@ app.get("/", (req, res) => {
 });
 
 
-app.get("/portfolio", (req, res) => {
-	res.render("portfolio.hbs", {
-		pageTitle: "This is portfolio page",
-		someText: "Some info about my portfolio"
+app.get("/projects", (req, res) => {
+	res.render("projects.hbs", {
+		pageTitle: "This is Projects page",
+		someText: "Some info about my projects"
 	});
 });
 
